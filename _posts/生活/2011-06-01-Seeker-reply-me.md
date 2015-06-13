@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Seeker的回信
-category: 生活
+category: IOS
 tags: 随感
 keywords: 
 description: 

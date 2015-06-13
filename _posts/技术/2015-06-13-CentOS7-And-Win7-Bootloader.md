@@ -1,7 +1,8 @@
 ---
 layout: post
 title: CentOS7和win7双系统下修复win7启动项
-category: Linux
+category: 技术
+tags: Linux
 keywords:
 description:
 ---

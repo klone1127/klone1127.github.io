@@ -72,6 +72,39 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 ![3](/public/img/IOS/arrayWithObjects-diff-objects.png)
 
->初始化创建
+>init方法创建
 
+1.创建和返回一个数组，新建的数组包含另一个数组
+	
+	- (instancetype)initWithArray:(NSArray *)anArray
+	
+	NSArray *arrayInitWithArray = [[NSArray alloc]initWithArray:otherArray];
+返回值:***An array initialized to contain the objects in anArray. The returned object might be different than the original receiver.***
+
+2.创建时添加多个对象
+
+	- (instancetype)initWithObjects:(id)firstObj, ...
+	
+	NSArray *arrayinitWithArray = [[NSArray alloc]initWithObjects:@"Apple",@"Google"，@"MicroSoft",nil];
+	
+**********************
+
+判断是否包含某一个对象，判断的是指针对象值，不是对象中的值
+
+	- (BOOL)containsObject:(id)anObject
+	
+	BOOL isContains = [arrayinitWithArray containsObject:@"Apple"]
+	
+返回值:***YES if anObject is present in the array, otherwise NO.***
+
+>>Discussion:
+
+***This method determines whether anObject is present in the array by sending an *** isEqual***: message to each of the array’s objects (and passing anObject as the parameter to each ***isEqual***: message).***
+
+计算数组对象中的个数
+
+	@property(readonly) NSUInteger count
+
+	NSUInteger count = [arrayinitWithArray count];
+	
 	

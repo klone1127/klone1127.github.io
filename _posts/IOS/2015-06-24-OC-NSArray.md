@@ -99,11 +99,7 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 >>Discussion:
 
-<<<<<<< HEAD
-***This method determines whether anObject is present in the array by sending an ** isEqual**: message to each of the array’s objects (and passing anObject as the parameter to each **isEqual**: message).***
-=======
 This method determines whether anObject is present in the array by sending an ***isEqual***: message to each of the array’s objects (and passing anObject as the parameter to each ***isEqual***: message).
->>>>>>> origin/master
 
 ####计算数组对象中的个数
 

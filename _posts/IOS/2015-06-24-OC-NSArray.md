@@ -15,7 +15,7 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 	NSMutableArray：可变
 
-下面是从苹果官方API截下来的简介，从图中可以看到***NSArray***的父类是 ***NSObject***，其子类是 ***NSMutableArray***，所以 ***NSArray***的所有方法在***NSMutableArray***中都能使用。当然，***NSMutableArray***也有自己特有的方法。
+下面是从苹果官方API截下来的简介，从图中可以看到 ***NSArray***的父类是 ***NSObject***，其子类是 ***NSMutableArray***，所以 ***NSArray***的所有方法在 ***NSMutableArray***中都能使用。当然，***NSMutableArray***也有自己特有的方法。
 
 ![1](/public/img/IOS/about-NSArray.png)
 ##NSArray
@@ -99,7 +99,11 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 >>Discussion:
 
+<<<<<<< HEAD
 ***This method determines whether anObject is present in the array by sending an ** isEqual**: message to each of the array’s objects (and passing anObject as the parameter to each **isEqual**: message).***
+=======
+This method determines whether anObject is present in the array by sending an ***isEqual***: message to each of the array’s objects (and passing anObject as the parameter to each ***isEqual***: message).
+>>>>>>> origin/master
 
 ####计算数组对象中的个数
 

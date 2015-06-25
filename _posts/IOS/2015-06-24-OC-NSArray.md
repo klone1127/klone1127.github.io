@@ -258,13 +258,13 @@ init创建:
 
 	[initMutArray insertObject:@"abc" atIndex:0];
  
-####替换
+###替换
 
 	- (void)replaceObjectAtIndex:(NSUInteger)index  withObject:(id)anObject
 
 	[initMutArray replaceObjectAtIndex:0 withObject:@"zhang"]; 
 	
-####排序
+###排序
 
 摘自API：
 

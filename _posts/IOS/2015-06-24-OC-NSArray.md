@@ -97,7 +97,7 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 	
 返回值:***YES if anObject is present in the array, otherwise NO.***
 
->>Discussion:
+>Discussion:
 
 This method determines whether anObject is present in the array by sending an ***isEqual***: message to each of the array’s objects (and passing anObject as the parameter to each ***isEqual***: message).
 
@@ -177,11 +177,11 @@ NSMakeRange 其实就是一个结构体
 
 	[arrayinitWithArray replaceObjectsInRange:NSMakeRange(1, 3) withObjectsFromArray:array];
 	
-交换数组中的内容 1 和 3 代表位置
+####交换数组中的内容 1 和 3 代表位置
 
 	[arrayinitWithArray exchangeObjectAtIndex:1 withObjectAtIndex:3];  
 	
-数组(存储的全是字符串)拼接
+####数组(存储的全是字符串)拼接
 
 	- (NSString *)componentsJoinedByString:(NSString *)separator
 	
@@ -196,7 +196,7 @@ API上的例子:
 	NSLog(@"%@",[pathArray componentsJoinedByString:@" "]);
 	
 	
-在数组的尾部增加一个对象,返回一个新的数组对象，因为他是不可变的 
+####在数组的尾部增加一个对象,返回一个新的数组对象，因为他是不可变的 
 
 	- (NSArray *)arrayByAddingObject:(id)anObject
 
@@ -258,14 +258,16 @@ init创建:
 
 	[initMutArray insertObject:@"abc" atIndex:0];
  
-替换
+####替换
 
 	- (void)replaceObjectAtIndex:(NSUInteger)index  withObject:(id)anObject
 
 	[initMutArray replaceObjectAtIndex:0 withObject:@"zhang"]; 
 	
-排序
+####排序
+
 摘自API：
+
 	- (void)sortUsingSelector:(SEL)comparator
 			
 	Sorts the array’s elements in ascending order, as determined by the comparison method specified by a given selector.

@@ -151,6 +151,11 @@ NSMakeRange 其实就是一个结构体
     NSUInteger len
 	);
 	
+>下面是官方API上的一个例子
+
+![4](/public/img/IOS/subarrayWithRange-range.png)
+	
+	
 ####删除
 
 	[arrayinitWithArray removeAllObjects];//删除所有元素 

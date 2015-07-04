@@ -136,6 +136,17 @@ description:
 	
 		设置代理，并实现UITextFieldDelegate内的协议
 		textField.delegate = self;
+* 15、自动校验
+
+			typedef NS_ENUM(NSInteger, 	UITextAutocorrectionType) {
+     	   UITextAutocorrectionTypeDefault,
+     	   UITextAutocorrectionTypeNo,
+     	   UITextAutocorrectionTypeYes,
+    	};
+    
+    
+		   textField.autocorrectionType = UITextAutocorrectionTypeNo;
+		   
 
 ####3.添加到父视图
 

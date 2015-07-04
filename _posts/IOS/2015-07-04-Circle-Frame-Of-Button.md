@@ -10,13 +10,13 @@ description:
 >生成一个带圆形边框的按钮
 	做按钮的时候想到以前做网站时做的简洁风格按钮，于是就想用现在学的IOS技术做一个，刚开始只想到用两个圆嵌套，做成那种风格的，但是，这毕竟不是按钮啊，而且代码量有点儿大，最后查看API在加上Google到的CGColorSpaceRef，得到现在的按钮。
 
-     UIButton * signButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton * signButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
-     signButton.frame = CGRectMake(80, 330, 50, 30);
+    signButton.frame = CGRectMake(80, 330, 50, 30);
      
-     //signButton.backgroundColor = [UIColor cyanColor];
+    //signButton.backgroundColor = [UIColor cyanColor];
      
-     [signButton setTitle:@"登 录" forState:(UIControlStateNormal)];
+    [signButton setTitle:@"登 录" forState:(UIControlStateNormal)];
      
     [signButton setTitleColor:[UIColor blueColor] forState:(UIControlStateNormal)];
     

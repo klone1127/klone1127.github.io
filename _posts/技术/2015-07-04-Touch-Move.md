@@ -2,7 +2,7 @@
 layout: post
 title: 移动视图在屏幕上的位置
 category: 技术
-tags: IOS
+tags: iOS
 keywords:
 description:
 ---

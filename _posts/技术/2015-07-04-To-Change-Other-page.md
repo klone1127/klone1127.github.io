@@ -2,7 +2,7 @@
 layout: post
 title: 实现页面跳转
 category: 技术
-tags: IOS
+tags: iOS
 keywords:
 description:
 ---

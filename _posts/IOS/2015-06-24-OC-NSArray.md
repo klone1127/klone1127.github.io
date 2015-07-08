@@ -1,8 +1,8 @@
 ---
 layout: post
 title: OC数组的操作
-category: IOS
-tags: IOS
+category: iOS
+tags: iOS
 keywords: 
 description:
 ---
@@ -17,7 +17,7 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 下面是从苹果官方API截下来的简介，从图中可以看到 ***NSArray***的父类是 ***NSObject***，其子类是 ***NSMutableArray***，所以 ***NSArray***的所有方法在 ***NSMutableArray***中都能使用。当然，***NSMutableArray***也有自己特有的方法。
 
-![1](/public/img/IOS/about-NSArray.png)
+![1](/public/img/iOS/about-NSArray.png)
 ##NSArray
 ###创建数组
 
@@ -50,9 +50,9 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 我今天使用这个方法读取文件的时候，发现只有plist文件能读取，之前使用txt文件打印的结果都是null，之后在stackoverflow找到有人说只能读取plist文件。
 
-![2](/public/img/IOS/arrayWithContentsOfFile-Can-Be-Only-Used-With-Plists-01.png)
+![2](/public/img/iOS/arrayWithContentsOfFile-Can-Be-Only-Used-With-Plists-01.png)
 
-![3](/public/img/IOS/arrayWithContentsOfFile-Can-Be-Only-Used-With-Plists-02.png)
+![3](/public/img/iOS/arrayWithContentsOfFile-Can-Be-Only-Used-With-Plists-02.png)
 
 ####4.创建时添加一个对象
 
@@ -70,7 +70,7 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 最后有个nil，其实它在这里的作用和C语言字符串中'\0'的作用一样，都是结束的意思。
 下面提供一个苹果API中的一个例子，定义了三种不同类型的对象，最后存入NSArray中。
 
-![3](/public/img/IOS/arrayWithObjects-diff-objects.png)
+![3](/public/img/iOS/arrayWithObjects-diff-objects.png)
 
 >init方法创建
 
@@ -153,7 +153,7 @@ NSMakeRange 其实就是一个结构体
 	
 >下面是官方API上的一个例子
 
-![4](/public/img/IOS/subarrayWithRange-range.png)
+![4](/public/img/iOS/subarrayWithRange-range.png)
 	
 	
 ####删除

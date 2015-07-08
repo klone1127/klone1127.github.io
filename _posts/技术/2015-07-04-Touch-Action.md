@@ -2,7 +2,7 @@
 layout: post
 title: 触摸屏幕随机变换颜色
 category: 技术
-tags: IOS
+tags: iOS
 keydwords:
 description:
 ---

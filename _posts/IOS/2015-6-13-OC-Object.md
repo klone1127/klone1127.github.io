@@ -1,8 +1,8 @@
 ---
 layout: post
 title: OC基础之类和对象
-category: IOS
-tags: IOS
+category: iOS
+tags: iOS
 keywords: 
 description: 
 ---

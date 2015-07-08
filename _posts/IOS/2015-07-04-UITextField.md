@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UITextField小记
-category: IOS
+category: iOS
 tags: UI
 keywords:
 description:

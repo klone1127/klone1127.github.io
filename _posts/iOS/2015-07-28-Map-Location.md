@@ -45,7 +45,7 @@ description:
 	 */
 	- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
 	    
-	    CLLocation *location = [[CLLocation alloc] init];
+	    CLLocation *location = [locations lastObject];
 	    CLLocationCoordinate2D coordinate = location.coordinate;
 	    NSLog(@"经度：%f  纬度：%f",coordinate.latitude,coordinate.longitude);
 	    

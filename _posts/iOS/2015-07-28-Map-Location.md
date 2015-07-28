@@ -47,7 +47,7 @@ description:
 	    
 	    CLLocation *location = [locations lastObject];
 	    CLLocationCoordinate2D coordinate = location.coordinate;
-	    NSLog(@"经度：%f  纬度：%f",coordinate.latitude,coordinate.longitude);
+	    NSLog(@"纬度：%f  经度：%f",coordinate.latitude,coordinate.longitude);
 	    
 	}
 	
@@ -124,7 +124,7 @@ description:
 	    
 	    CLLocation *location = [locations lastObject];
 	    CLLocationCoordinate2D coordinate = location.coordinate;
-	    NSLog(@"经度：%f  纬度：%f",coordinate.latitude,coordinate.longitude);
+	    NSLog(@"纬度：%f  经度：%f",coordinate.latitude,coordinate.longitude);
 	    
 	}
 	/**

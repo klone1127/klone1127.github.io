@@ -1,6 +1,6 @@
 ---
 layout: post
-title: iOS8、Xcode6上不能调用代理方法的解决方法
+title: iOS8、Xcode6上地图定位不调用代理方法的解决方法(一)
 category: iOS
 tags: Map
 keywords:

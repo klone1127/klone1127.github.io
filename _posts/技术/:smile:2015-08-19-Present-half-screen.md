@@ -35,5 +35,5 @@ description:
     
    效果图：
 
- ![1](/public/img/iOS/halfScreenView.mov)
+ ![1](/public/img/iOS/halfScreenView.gif)
    

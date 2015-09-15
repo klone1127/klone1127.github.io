@@ -1,11 +1,109 @@
----
-title : Sitemap
----
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-{% for page in site.pages %}
-  {{site.address}}{{ page.url }}
-{% endfor %}
-
-{% for post in site.posts %}
-  {{site.address}}{{ post.url }}
-{% endfor %}
+<url>
+  <loc>http://klone1127.github.io/</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/pages/archive.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/pages/about.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2013/12/31/Can-not.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2012/12/31/To-my-friends.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2011/06/01/Seeker-reply-me.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/08/19/Present-half-screen.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/08/19/Map-address-property.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/07/04/Zoom.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/07/04/Touch-Move.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/07/04/Touch-Action.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/07/04/To-Change-Other-page.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/07/04/Responder.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/07/04/Circle-Frame-Of-Button.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/06/13/CentOS7-And-Win7-Bootloader.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/01/30/Git-Resources.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/08/19/Map-Location2.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/07/28/Map-Location.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/07/04/UITextField.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/07/04/UILabel.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/07/04/UIButton.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/06/24/OC-NSArray.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/06/17/OC-String.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/06/15/OC-Basic.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+<url>
+  <loc>http://klone1127.github.io/2015/06/13/OC-Object.html</loc>
+  <lastmod>2015-09-15T12:09:25+00:00</lastmod>
+</url>
+</urlset>

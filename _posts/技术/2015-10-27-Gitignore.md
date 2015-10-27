@@ -64,3 +64,4 @@ description:
 * [***git***--fast-version-control  gitignore](http://git-scm.com/docs/gitignore)
 
 * [***廖雪峰Git教程***——忽略特殊文件](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000)
+* [***Github 上的模板***](https://github.com/github/gitignore)

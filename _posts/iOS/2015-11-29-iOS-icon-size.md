@@ -11,4 +11,4 @@ description:
 
 如下 GIF 所示:
 
-![1](/public/img/iOS-icon.gif)
+![1](/public/img/iOS/iOS-icon.gif)

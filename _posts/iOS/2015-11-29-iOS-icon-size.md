@@ -1,7 +1,7 @@
 ---
 layout:post
 title: icon Size 
-category: iOS
+categray: iOS
 tags: iOS
 keywords:
 description:

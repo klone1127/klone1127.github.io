@@ -1,5 +1,5 @@
 ---
-layout:post
+layout: post
 title: icon Size 
 categray: iOS
 tags: iOS
@@ -11,4 +11,4 @@ description:
 
 如下 GIF 所示:
 
-![](/public/img/iOS-icon.gif)
+![1](/public/img/iOS-icon.gif)

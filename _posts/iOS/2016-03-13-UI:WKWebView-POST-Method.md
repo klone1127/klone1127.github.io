@@ -29,4 +29,5 @@ description:
 	        req.HTTPBody = request.HTTPBody;
 	        req.HTTPMethod = request.HTTPMethod;
 	    }
+	    
 这样加载的页面发送的就是 POST 请求了，我的问题就是这样解决的。

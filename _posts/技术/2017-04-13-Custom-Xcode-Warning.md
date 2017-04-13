@@ -1,0 +1,15 @@
+> 在项目中总免不了想要添加一些类似 TODO/FIXME 之类的提示信息，但 Xcode 自带的 warning 提示有时用着并不是那么爽， 还不识别中文(不要问我为啥不用英文写… :joy:)
+
+#### 下面介绍一种通过 shell 脚本添加自定义 warning 的方式，其他方式还没怎么去探索
+
+* 点击 target -> Build Phases -> 添加 New Run Script Phases
+
+    ````shell
+    TAGS="TODO:|FIXME:"
+    echo "searching ${SRCROOT} for ${TAGS}"
+    find "${SRCROOT}" \( -name "*.h" -or -name "*.m" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "($TAGS).*\$" | perl -p -e "s/($TAGS)/ warning: \$1/"
+    ````
+
+在项目中添加  // TODO: 编译后就可以看到了。
+
+![图示](http://olnx7jkmx.bkt.clouddn.com/Custom-Xcode-Warning.png)

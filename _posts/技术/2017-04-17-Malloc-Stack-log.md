@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Malloc Stack 开启后 log 问题
+title: Malloc Stack 开启后打印大量 log 问题
 category: 技术 
 tags: iOS
 keywords:

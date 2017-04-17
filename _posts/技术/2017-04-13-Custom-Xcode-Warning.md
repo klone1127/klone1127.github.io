@@ -1,3 +1,11 @@
+---
+layout: post
+title: 自定义 Xcode Warning
+category: 技术
+tags: iOS
+keywords:
+description:
+---
 > 在项目中总免不了想要添加一些类似 TODO/FIXME 之类的提示信息，但 Xcode 自带的 warning 提示有时用着并不是那么爽， 还不识别中文(不要问我为啥不用英文写… :joy:)
 
 >#### 下面介绍一种通过 shell 脚本添加自定义 warning 的方式，其他方式还没怎么去探索

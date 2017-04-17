@@ -1,3 +1,11 @@
+---
+layout: post
+title: react-native 安卓编译出错
+category: 技术
+tags: react-native
+keywords:
+description:
+---
 ### react-native 安卓编译出错
 
 新建了一个 RN 项目，使用 Android Studio 导入打开项目的时候报错:

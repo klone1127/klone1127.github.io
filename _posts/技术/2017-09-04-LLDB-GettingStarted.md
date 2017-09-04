@@ -118,7 +118,7 @@ ___得到的结果和文中的有出入，稍后我会研究一下___
 	__TTSfq4n_n_d_d_n___TFs18_fatalErrorMessageFTVs12StaticStringS_4fileS_4lineSu5flagsVs6UInt32_Os5Never
 文中正确的结果，类似这种：
 	(lldb) ex -l swift -o -- unsafeBitCast(0x14bdd9b50, NSObject.self) <NSTextViewSubclass: 0x14b7a65c0>
-		Frame = {{0.00, 0.00}, {1089.00, 1729.00}}, Bounds = {{0.00, 0.00}, {1089.00, 1729.00}}
+		Frame = {\{0.00, 0.00}, {1089.00, 1729.00}}, Bounds = {\{0.00, 0.00}, {1089.00, 1729.00}}
 		Horizontally resizable: NO, Vertically resizable: YES
 		MinSize = {1089.00, 259.00}, MaxSize = {10000000.00, 10000000.00}
 	(lldb) ex -l swift -o -- unsafeBitCast(0x14bdd9b50, NSObject.self) is NSTextView

@@ -34,7 +34,7 @@ Terminal 中输入 lldb，
 输出类似：
 
 <div>
-  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-lldb_-n_Finder" width="200px" />
+  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-lldb_-n_Finder" width="300px" />
 </div>
 
 ## Attaching LLDB to Xcode
@@ -42,8 +42,8 @@ Terminal 中输入 lldb，
 
 打开一个新的终端，然后， ⌘ + Shift + I ，更改标签页标题为 LLDB
 
-<div align=center>
-  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-Window" width="200px" />
+<div>
+  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-Window" width="300px" />
 </div>
 
 确保没有 Xcode 正在运行，以防运行多个混淆
@@ -82,9 +82,9 @@ Terminal 中输入 lldb，
 这时你可以在 Xcode stderr 看到Xcode输出的log，Xcode 也会被打开
 > 新建swift项目
 
-> <div>
-  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-new-project" width="200px" />
-  </div>
+<div>
+  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-new-project" width="300px" />
+</div>
   
 > 切换到Xcode，打开ViewController.swift
 ### Finding a class with a click
@@ -103,7 +103,7 @@ Terminal 中输入 lldb，
 点击Xcode，任意位置
 
 <div>
-  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-debuggerXcode-continue" width="200px" />
+  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-debuggerXcode-continue" width="300px" />
 </div>
 
 使用 RDI 进行输出
@@ -244,7 +244,7 @@ ___得到的结果和文中的有出入，稍后我会研究一下___
 在Xcode上点击，在Xcode stderr窗口中将会看到符合要求的输出
 
 <div>
-  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-blockSwizzleInit-View" width="200px" />
+  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-blockSwizzleInit-View" width="300px" />
 </div>
 
 第一节就先这样，有不足之处再进行补充。

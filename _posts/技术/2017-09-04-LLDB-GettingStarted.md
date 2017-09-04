@@ -37,7 +37,7 @@ Terminal 中输入 lldb，
 输出类似：
 
 <div>
-  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-lldb_-n_Finder" width="200px" />
+  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-lldb_-n_Finder" width="200px" align=center/>
 </div>
 
 ## Attaching LLDB to Xcode

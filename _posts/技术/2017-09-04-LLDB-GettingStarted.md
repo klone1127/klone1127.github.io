@@ -30,11 +30,13 @@ description:
 
 Terminal 中输入 lldb，
 
-	lldb -n Finder
-	
+```shell
+    lldb -n Finder
+```
+
 输出类似：
 
-<div align=center>
+<div>
   <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-lldb_-n_Finder" width="200px" />
 </div>
 
@@ -82,9 +84,11 @@ Terminal 中输入 lldb，
 	
 这时你可以在 Xcode stderr 看到Xcode输出的log，Xcode 也会被打开
 > 新建swift项目
+
 > <div align=center>
   <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-new-project" width="200px" />
   </div>
+  
 > 切换到Xcode，打开ViewController.swift
 ### Finding a class with a click
 
@@ -100,6 +104,7 @@ Terminal 中输入 lldb，
 	Process 13166 resuming
 	
 点击Xcode，任意位置
+
 <div align=center>
   <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-debuggerXcode-continue" width="200px" />
 </div>
@@ -205,6 +210,7 @@ ___得到的结果和文中的有出入，稍后我会研究一下___
 	IMP $oldImp = (IMP)method_getImplementation($method);
 	
 输入完就 enter(回车)
+
 在 LLDB 中，所有变量都是使用 $ 作为开头
 
 	(lldb) po $class
@@ -224,6 +230,7 @@ ___得到的结果和文中的有出入，稍后我会研究一下___
 	method_setImplementation($method, $newImp);
 	
 此方法的目的是 swizzle -[NSObject init]， -[NSObject init]除了返回它自己，什么也不做，新建的block检测object是否属于 NSView 类，是的话就输出出来
+
 文中解释其如何工作：	
 
 	1. You create a block that takes an object reference.

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Chapter 1: Getting Started
+title: Chapter 1- Getting Started
 category: 技术
-tags: LLDB
+tags: iOS
 keywords:
 description:
 ---

@@ -95,7 +95,7 @@ hitTest: 方法被触发，点击的位置不同，得到的结果或许不同
 之后就是点击Xcode，如果是 NSTextView 或者是其子类，都会响应。书中说是点击 code area in Xcode (代码区域)，断点会停下来，但是我点击后也没有停下来(Xcode 9 deta 6)，我是点击target version 区域
 	(lldb) po $rdi
 	<NSTextView: 0x13d18d960>
-	Frame = {{2.00, 3.00}, {266.00, 14.00}}, Bounds = {{0.00, 0.00}, {266.00, 14.00}}
+	Frame = {\{2.00, 3.00}, {266.00, 14.00}\}, Bounds = {\{0.00, 0.00}, {266.00, 14.00}\}
 	Horizontally resizable: YES, Vertically resizable: YES
 	MinSize = {266.00, 14.00}, MaxSize = {40000.00, 40000.00}
 

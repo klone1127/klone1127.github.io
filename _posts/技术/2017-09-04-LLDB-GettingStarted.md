@@ -10,9 +10,6 @@ description:
 
 > > 以下内容整理自：[<ADVANCED APPLE DEBUGGING & REVERSE ENGINEERING>](https://store.raywenderlich.com/products/advanced-apple-debugging-and-reverse-engineering) 如有出入望指正
 
-
-<p align="center">Chapter 1: Getting Started</p>
-
 > 由于OSX EI Capitan(10.11)开始引入了[***SIP(System Integrity Protection/系统完整性保护机制)***](http://devstreaming.apple.com/videos/wwdc/2015/706nu20qkag/706/706_security_and_your_apps.pdf)， 所以首先关闭SIP
 
 * 重启电脑
@@ -37,7 +34,7 @@ Terminal 中输入 lldb，
 输出类似：
 
 <div>
-  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-lldb_-n_Finder" width="200px" align=center/>
+  <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-lldb_-n_Finder" width="200px" />
 </div>
 
 ## Attaching LLDB to Xcode
@@ -85,7 +82,7 @@ Terminal 中输入 lldb，
 这时你可以在 Xcode stderr 看到Xcode输出的log，Xcode 也会被打开
 > 新建swift项目
 
-> <div align=center>
+> <div>
   <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-new-project" width="200px" />
   </div>
   
@@ -105,7 +102,7 @@ Terminal 中输入 lldb，
 	
 点击Xcode，任意位置
 
-<div align=center>
+<div>
   <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-debuggerXcode-continue" width="200px" />
 </div>
 
@@ -246,7 +243,7 @@ ___得到的结果和文中的有出入，稍后我会研究一下___
 使用 continue 开始debugging。
 在Xcode上点击，在Xcode stderr窗口中将会看到符合要求的输出
 
-<div align=center>
+<div>
   <img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-blockSwizzleInit-View" width="200px" />
 </div>
 

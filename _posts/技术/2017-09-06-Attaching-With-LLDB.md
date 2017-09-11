@@ -212,7 +212,7 @@ ___-o___ 输出到文件
 
 	$ wc < /tmp/wc_input.txt
 
-有时候你并不想要 ___stdin___(standard input)，这在一些类似 ___Xcode ___的 ___GUI___，但并不适用于类似 ___wc___ 和 ___ls___ 的终端命令
+有时候你并不想要 ___stdin___(standard input)，这在一些类似 ___Xcode___ 的 ___GUI___，但并不适用于类似 ___wc___ 和 ___ls___ 的终端命令
 
 举个栗子，运行无参数的 ___wc___
 

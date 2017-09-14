@@ -33,14 +33,14 @@ Terminal 中输入 lldb，
 
 输出类似：
 
-<img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-lldb_-n_Finder" width="300px" />
+<img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-lldb?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10_-n_Finder" width="300px" />
 
 ## Attaching LLDB to Xcode
 > 使用 LLDB 调试 Xcode
 
 打开一个新的终端，然后， ⌘ + Shift + I ，更改标签页标题为 LLDB
 
-<img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-Window" width="300px" />
+<img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-Window?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 确保没有 Xcode 正在运行，以防运行多个混淆
 使用 ⌘ + T 新开一个， ⌘ + Shift + I ， 命名为Xcode stderr
@@ -78,7 +78,7 @@ Terminal 中输入 lldb，
 这时你可以在 Xcode stderr 看到Xcode输出的log，Xcode 也会被打开
 > 新建swift项目
 
-<img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-new-project" width="300px" />
+<img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-new-project?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 > 切换到Xcode，打开ViewController.swift
 ### Finding a class with a click
@@ -96,7 +96,7 @@ Terminal 中输入 lldb，
 
 点击Xcode，任意位置
 
-<img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-debuggerXcode-continue" width="300px" />
+<img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-debuggerXcode-continue?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 使用 RDI 进行输出
 
@@ -235,6 +235,6 @@ ___得到的结果和文中的有出入，稍后我会研究一下___
 使用 continue 开始debugging。
 在Xcode上点击，在Xcode stderr窗口中将会看到符合要求的输出
 
-<img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-blockSwizzleInit-View" width="300px" />
+<img src="http://olnx7jkmx.bkt.clouddn.com/2017-09-04-LLDB-blockSwizzleInit-View?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 第一节就先这样，有不足之处再进行补充。

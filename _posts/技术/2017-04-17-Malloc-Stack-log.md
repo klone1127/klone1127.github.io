@@ -24,11 +24,11 @@ description:
 
 * 3、 使用 Xcode 运行，查看了 Xcode 性能监控提示发现…磁盘显示...惊人
 
-  ![性能显示](http://olnx7jkmx.bkt.clouddn.com/Xcode-%E6%80%A7%E8%83%BD%E6%98%BE%E7%A4%BA.png)
+  ![性能显示](http://olnx7jkmx.bkt.clouddn.com/Xcode-%E6%80%A7%E8%83%BD%E6%98%BE%E7%A4%BA.png?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10)
 
 点进去看了发现：
 
-![写文件](http://olnx7jkmx.bkt.clouddn.com/Malloc-Stack-logs-File.png)
+![写文件](http://olnx7jkmx.bkt.clouddn.com/Malloc-Stack-logs-File.png?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10)
 
 问题就是出在这儿了，一直有 log 在写入，那这个文件属于谁呢，在debug时有时需要打开 zombie 调试和 logging 调试，以帮助我们定位 bug，好了，到此已经算是解决问题了
 
@@ -38,4 +38,4 @@ description:
 
 去掉之后就会解决这个问题了，其实在控制器也会提示打印这个 log 。
 
-![取消选择](http://olnx7jkmx.bkt.clouddn.com/noselect-Malloc-Stack.png)
+![取消选择](http://olnx7jkmx.bkt.clouddn.com/noselect-Malloc-Stack.png?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10)

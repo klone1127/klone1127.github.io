@@ -338,10 +338,15 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
+  enable: false
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# 页面底部显示
+bottom_copyright:
   enable: true
   license: 知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
 
 
 # ---------------------------------------------------------------

@@ -9,7 +9,7 @@ subtitle:
 description:
 author: klone1127
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: en
+language: Hans
 date_format: '%Y-%m-%d'
 
 # URL
@@ -86,7 +86,7 @@ keywords: "Jekyll, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2015 
 
 # icon between year and author @Footer
 authoricon: heart
@@ -117,12 +117,12 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
-  #about: /about/
+  categories: /categories/
+  about: /about/
   archives: /archives/
   tags: /tags/
-  #sitemap: /sitemap.xml
-  #commonweal: /404.html
+  sitemap: /sitemap.xml
+  commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -150,9 +150,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+# scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -214,7 +214,9 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 #social:
   #LinkLabel: Link
-
+  GitHub: http://github.com/klone1127
+  微博: http://weibo.com/klone1127
+  邮箱: falcon_sky@yeah.net
 
 # Social Links Icons
 # Icon Mapping:
@@ -227,7 +229,14 @@ social_icons:
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   Twitter: twitter
-  Weibo: weibo
+  微博: weibo
+  邮箱: envelope
+
+
+# 打赏功能
+# reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+# wechatpay: /path/to/wechat-reward-image
+# alipay: /path/to/alipay-reward-image
 
 
 # Sidebar Avatar
@@ -255,8 +264,8 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right
-  position: left
-  #position: right
+  # position: left
+  position: right
 
   # Sidebar Display, available value:
   #  - post    expand on posts automatically. Default.
@@ -279,7 +288,7 @@ sidebar:
   scrollpercent: false
 
 
-# Blog rolls
+# Blog rolls，友情链接
 #links_title: Links
 #links_layout: block
 #links_layout: inline
@@ -320,7 +329,8 @@ post_wordcount:
   min2read: false
   separated_meta: true
 
-# Wechat Subscriber
+# Wechat Subscriber，微信公众号
+# 在每篇文章的末尾显示微信公众号二维码，扫一扫，轻松订阅博客。
 #wechat_subscriber:
   #enabled: true
   #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
@@ -379,8 +389,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: klone1127
   count: true
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
@@ -426,7 +436,10 @@ changyan:
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-67577737-1
+
+# Google站点管理工具
+google_site_verification: Yzu-Srx9zMMktkBVdV9Dl-NwdAhuKmC9UyQNUgS1nzo
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
@@ -598,7 +611,7 @@ pace_theme: pace-theme-minimal
 canvas_nest: false
 
 # three_waves
-three_waves: false
+three_waves: true
 
 # canvas_lines
 canvas_lines: false

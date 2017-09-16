@@ -102,7 +102,7 @@
               {% if name == "邮箱" %}
                 {% assign displayLink = "mailto:{{ link }}" %}
               {% endif %}
-                <a href= displayLink target="_blank" title="{{ name }}">
+                <a href= {{ displayLink }} target="_blank" title="{{ name }}">
                   {% if site.social_icons.enable %}
                     <i class="fa fa-fw fa-{{ site.social_icons[name] | default: 'globe' | downcase }}"></i>
                   {% endif %}

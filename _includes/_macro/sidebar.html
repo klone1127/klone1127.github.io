@@ -98,9 +98,9 @@
               {% assign name = name_link[0] %}
               {% assign link = name_link[1] %}
               <span class="links-of-author-item">
-              {% assign displayLink = {{ link }} %}
+              {% assign displayLink = link %}
               {% if name == "邮箱" %}
-                {% assign displayLink = 'mailto:' | append:{{ link }} %}
+                {% assign displayLink = 'mailto:' | append: link %}
               {% endif %}
                 <a href= "{{ displayLink }}" target="_blank" title="{{ name }}">
                   {% if site.social_icons.enable %}

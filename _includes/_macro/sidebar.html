@@ -100,7 +100,7 @@
               <span class="links-of-author-item">
               {% assign displayLink = "{{ link }}" %}
               {% if name == "邮箱" %}
-                {% displayLink = "mailto:{{ link }}" %}
+                {% assign displayLink = "mailto:{{ link }}" %}
               {% endif %}
                 <a href="{{ displayLink }}" target="_blank" title="{{ name }}">
                   {% if site.social_icons.enable %}

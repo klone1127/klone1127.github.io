@@ -216,7 +216,7 @@ social:
   #LinkLabel: Link
   GitHub: http://github.com/klone1127
   微博: http://weibo.com/klone1127
-  # 邮箱: falcon_sky@yeah.net
+  邮箱: falcon_sky@yeah.net
 
 # Social Links Icons
 # Icon Mapping:
@@ -230,7 +230,7 @@ social_icons:
   GitHub: github
   Twitter: twitter
   微博: weibo
-  # 邮箱: envelope
+  邮箱: envelope
 
 
 # 打赏功能

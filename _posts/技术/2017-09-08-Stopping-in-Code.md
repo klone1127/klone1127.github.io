@@ -11,7 +11,7 @@ description:
 
 > 不管你是使用 Swif, Objective-C, C++,C 或是其他语言，你都将学会使用断点。在图形界面的 Xcode 中点击面板边上就可以很轻松的设置一个断点，但是使用 LLDB 控制台可以带来更多控制方式的断点。
 
-> [随书的代码资源下载](http://7xq3rg.com1.z0.glb.clouddn.com/AdvanceAppleDebugging_v0.9.1_SourceCode.zip)(我放七牛上的资源)，也可以去[官网下载](https://wolverine.raywenderlich.com/print-books/dbg/AdvanceAppleDebugging_v0.9.1_SourceCode.zip)
+> [随书的代码资源下载](http://7xq3rg.com1.z0.glb.clouddn.com/AdvanceAppleDebugging_v0.9.1_SourceCode.zip)(我放七牛上的资源)，也可以[下载官网](https://wolverine.raywenderlich.com/print-books/dbg/AdvanceAppleDebugging_v0.9.1_SourceCode.zip)
 
 
 ### Signal

@@ -19,12 +19,13 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 <img src="http://olnx7jkmx.bkt.clouddn.com/about-NSArray?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
-##NSArray
-###创建数组
+## NSArray
+
+### 创建数组
 
 >构造器创建数组
 
-####1.创建一个空数组	
+#### 1.创建一个空数组	
 
 	+ (instancetype)array
 
@@ -32,7 +33,7 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 	NSArray *emptyArray = [NSArray array];
 
-####2.创建和返回一个数组，新建的数组包含另一个数组
+#### 2.创建和返回一个数组，新建的数组包含另一个数组
 
 	+ (instancetype)arrayWithArray:(NSArray *)anArray
 
@@ -41,7 +42,7 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 创建一个数组returnArray，并将数组anotherArray中的值传进来
 
 
-####3.从一个文件新建一个数组
+#### 3.从一个文件新建一个数组
 
 	+ (NSArray *)arrayWithContentsOfFile:(NSString *)aPath
 
@@ -55,7 +56,7 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 <img src="http://olnx7jkmx.bkt.clouddn.com/arrayWithContentsOfFile-Can-Be-Only-Used-With-Plists-02?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
-####4.创建时添加一个对象
+#### 4.创建时添加一个对象
 
 	+ (instancetype)arrayWithObject:(id)anObject
 	Creates and returns an array containing a given object.
@@ -75,21 +76,21 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 >init方法创建
 
-####1.创建和返回一个数组，新建的数组包含另一个数组
+#### 1.创建和返回一个数组，新建的数组包含另一个数组
 
 	- (instancetype)initWithArray:(NSArray *)anArray
 
 	NSArray *arrayInitWithArray = [[NSArray alloc]initWithArray:otherArray];
 返回值:***An array initialized to contain the objects in anArray. The returned object might be different than the original receiver.***
 
-####2.创建时添加多个对象
+#### 2.创建时添加多个对象
 
 	- (instancetype)initWithObjects:(id)firstObj, ...
 
 	NSArray *arrayinitWithArray = [[NSArray alloc]initWithObjects:@"Apple",@"Google"，@"MicroSoft",nil];
 **********************
 
-####判断是否包含某一个对象，判断的是指针对象值，不是对象中的值
+#### 判断是否包含某一个对象，判断的是指针对象值，不是对象中的值
 
 	- (BOOL)containsObject:(id)anObject
 
@@ -101,13 +102,13 @@ oc数组也学了有几天了，今天在这里总结一下常用的方法
 
 This method determines whether anObject is present in the array by sending an ***isEqual***: message to each of the array’s objects (and passing anObject as the parameter to each ***isEqual***: message).
 
-####计算数组对象中的个数
+#### 计算数组对象中的个数
 
 	@property(readonly) NSUInteger count
 
 	NSUInteger count = [arrayinitWithArray count];
 
-####获取指定下标的对象
+#### 获取指定下标的对象
 
 	- (id)objectAtIndex:(NSUInteger)index
 
@@ -115,26 +116,26 @@ This method determines whether anObject is present in the array by sending an **
 
 获取数组的第一个对象。
 
-####获取下标里的所有元素，返回一个元素的集合(数组)
+#### 获取下标里的所有元素，返回一个元素的集合(数组)
 
 	- (NSArray *)objectsAtIndexes:(NSIndexSet *)indexes
 
 	NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet]; 
 	NSArray *arrIndexes = [arrayinitWithArray objectAtIndex:indexes];
 
-####获取第一个元素
+#### 获取第一个元素
 
 	@property(nonatomic, readonly) id firstObject
 
 	id arr1 = [arrayinitWithArray firstObject];
 
-####获取最后一个元素
+#### 获取最后一个元素
 
 	@property(nonatomic, readonly) id lastObject
 
 	id arr2 = [arrayinitWithArray lastObject];
 
-####获取连续范围内的对象
+#### 获取连续范围内的对象
 
 	- (NSArray *)subarrayWithRange:(NSRange)range
 
@@ -157,7 +158,7 @@ NSMakeRange 其实就是一个结构体
 
 ​	
 
-####删除
+#### 删除
 
 	[arrayinitWithArray removeAllObjects];//删除所有元素 
 
@@ -171,7 +172,7 @@ NSMakeRange 其实就是一个结构体
 
 	[arrayinitWithArray removeObjectsInRange:NSMakeRange(1, 2)];//删除指定范围中得元素
 
-####修改
+#### 修改
 
 	[arrayinitWithArray replaceObjectAtIndex:2 withObject:@"IBM"];  	
 
@@ -183,11 +184,11 @@ NSMakeRange 其实就是一个结构体
 
 	[arrayinitWithArray replaceObjectsInRange:NSMakeRange(1, 3) withObjectsFromArray:array];
 
-####交换数组中的内容 1 和 3 代表位置
+#### 交换数组中的内容 1 和 3 代表位置
 
 	[arrayinitWithArray exchangeObjectAtIndex:1 withObjectAtIndex:3];  
 
-####数组(存储的全是字符串)拼接
+#### 数组(存储的全是字符串)拼接
 
 	- (NSString *)componentsJoinedByString:(NSString *)separator
 
@@ -202,14 +203,14 @@ API上的例子:
 	NSLog(@"%@",[pathArray componentsJoinedByString:@" "]);
 
 ​	
-####在数组的尾部增加一个对象,返回一个新的数组对象，因为他是不可变的 
+#### 在数组的尾部增加一个对象,返回一个新的数组对象，因为他是不可变的 
 
 	- (NSArray *)arrayByAddingObject:(id)anObject
 
 	[arrayinitWithArray arrayByAddingObject:@"yuan"];  
 
 ​	
-####数组的遍历
+#### 数组的遍历
 
 	//数组的遍历
 	for(int i=0;i<arrayinitWithArray.count;i++){
@@ -224,9 +225,9 @@ API上的例子:
 
 ____________________________
 
-##NSMutableArray
+## NSMutableArray
 
-###创建
+### 创建
 
 构造器创建:
 
@@ -241,7 +242,7 @@ init创建:
 
 	NSMutableArray *initMutArray = [[NSMutableArray alloc]initWithCapacity:10];
 
-###添加
+### 添加
 
 添加了一个字符串
 
@@ -264,13 +265,13 @@ init创建:
 
 	[initMutArray insertObject:@"abc" atIndex:0];
 
-###替换
+### 替换
 
 	- (void)replaceObjectAtIndex:(NSUInteger)index  withObject:(id)anObject
 
 	[initMutArray replaceObjectAtIndex:0 withObject:@"zhang"]; 
 
-###排序
+### 排序
 
 摘自API：
 

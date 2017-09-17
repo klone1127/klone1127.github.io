@@ -9,7 +9,7 @@ description:
 
 >IDE:Xcode Version 6.1 (6A1052d),系统:OS X Yosemite 10.10.2 (14C109)
 
-####使用 ***CoreLocation/CoreLocation.h*** 定位时，出现了 ***CLLocationManagerDelegate*** 方法不调用的问题。
+#### 使用 ***CoreLocation/CoreLocation.h*** 定位时，出现了 ***CLLocationManagerDelegate*** 方法不调用的问题。
 
 主要代码如下:
 ​	
@@ -71,7 +71,7 @@ description:
 
 ************************************************
 
-####解决办法:
+#### 解决办法:
 
 在 info.plist 文件中添加 ***NSLocationAlwaysUsageDescription***
 ***NSLocationWhenInUseUsageDescription*** 这两个字段

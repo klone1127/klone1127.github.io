@@ -164,15 +164,3 @@ description:
 	       [textField resignFirstResponder];
 	
 	   }
-
-
-
-​		
-​		
-
-
-
-
-​    	 
-​    	 
-​	

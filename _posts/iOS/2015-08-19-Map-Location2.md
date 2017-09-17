@@ -13,20 +13,20 @@ IDE：Xcode Version 6.1 (6A1052d)
 
 iOS Simulator：iPhone 5/5S/6
 
-###改之前的代码如下：
-	
+### 改之前的代码如下：
+
 	//  ViewController.m
-	
+
 	//  mapKit-2
-	
+
 	//
-	
+
 	//  Created by zhanglongqing on 15/7/30.
-	
+
 	//  Copyright (c) 2015年 klone. All rights reserved.
-	
+
 	//
-	
+
 	# import "ViewController.h"	
 	# import <MapKit/MapKit.h>
 	
@@ -83,12 +83,12 @@ iOS Simulator：iPhone 5/5S/6
 			方法体;
 		if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
 		
-        [self.locationManager requestWhenInUseAuthorization]; 
-        
-        }
-    }
+	    [self.locationManager requestWhenInUseAuthorization]; 
+	    
+	    }
+	}
 
-###修改后的 viewdidLoad 
+### 修改后的 viewdidLoad 
 
 	- (void)viewDidLoad {
 	    [super viewDidLoad];
@@ -109,9 +109,9 @@ iOS Simulator：iPhone 5/5S/6
 或者
 
 	- (void)viewDidLoad {
-	
+
 	    [super viewDidLoad];	    
-	    
+
 	    self.locationManager = [[CLLocationManager alloc] init];
 	    [self.locationManager requestAlwaysAuthorization];
 	    self.locationManager.delegate = self;

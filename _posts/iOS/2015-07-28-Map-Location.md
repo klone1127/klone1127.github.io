@@ -12,10 +12,10 @@ description:
 ####使用 ***CoreLocation/CoreLocation.h*** 定位时，出现了 ***CLLocationManagerDelegate*** 方法不调用的问题。
 
 主要代码如下:
-	
+​	
 	#import "ViewController.h"
 	#import <CoreLocation/CoreLocation.h>
-
+	
 	@interface ViewController ()<CLLocationManagerDelegate>
 	@property (nonatomic,strong)CLLocationManager *mgr;
 	@end
@@ -66,7 +66,7 @@ description:
 	}
 	
 	@end
-	
+
 方法中，在懒加载处 _mgr.delegate = self ,@interface 处也写明了 <CLLocationManagerDelegate> ,之后写了获取位置的代理方法，locationManager:didUpdateLocations: ，看似没啥错误了，代理方法就是不执行...
 
 ************************************************
@@ -76,7 +76,7 @@ description:
 在 info.plist 文件中添加 ***NSLocationAlwaysUsageDescription***
 ***NSLocationWhenInUseUsageDescription*** 这两个字段
 
-![1](/public/img/iOS/map-Location.png)
+<img src="http://olnx7jkmx.bkt.clouddn.com/map-Location?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 还有一个操作就是:
 
@@ -84,7 +84,7 @@ description:
 
 	requestWhenInUseAuthorization()
 或者
-	
+​	
 	requestAlwaysAuthorization()
 到这里，运行代码，问题已经解决
 
@@ -145,12 +145,11 @@ description:
 
 info.plist 文件前后对比
 
-
-![2](/public/img/iOS/Map-plistFile-change.png)
+<img src="http://olnx7jkmx.bkt.clouddn.com/Map-plistFile-change?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 viewController.m 文件变动
 
-![3](/public/img/iOS/Map-ViewControllerFile-change.png)
+<img src="http://olnx7jkmx.bkt.clouddn.com/Map-ViewControllerFile-change?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 >造成这问题的原因是:iOS8 修改了位置设置里的内容，增加了一套状态(使用中/通常可用)，所以 CLLocationManager 注册后 delegate 就不响应了。
 

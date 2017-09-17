@@ -20,8 +20,7 @@ description:
 
 > 在项目中添加  // TODO: 编译后就可以看到了。
 
-![图示](http://olnx7jkmx.bkt.clouddn.com/Custom-Xcode-Warning.png?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10)
-
+<img src="http://olnx7jkmx.bkt.clouddn.com/Custom-Xcode-Warning.png?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 
 > 参考:

@@ -13,7 +13,7 @@ description:
 > Error:(24, 0) Could not find method android() for arguments [build_bvzjv4mjldob73mp1agwx72x5$_run_closure2@7a053e6a] on root project 'TestHelloWorld' of type org.gradle.api.Project.
 > <a href="openFile:/Users/mylove/TestHelloWorld/android/build.gradle">Open File</a>
 >
-> ![Gradle_Error](http://olnx7jkmx.bkt.clouddn.com/2017-02-20-React-Native%E5%AE%89%E5%8D%93%E7%BC%96%E8%AF%91%E5%87%BA%E9%94%99-Gradle_Error.png?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10)
+><img src="http://olnx7jkmx.bkt.clouddn.com/2017-02-20-React-Native%E5%AE%89%E5%8D%93%E7%BC%96%E8%AF%91%E5%87%BA%E9%94%99-Gradle_Error.png?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 >
 > 
 

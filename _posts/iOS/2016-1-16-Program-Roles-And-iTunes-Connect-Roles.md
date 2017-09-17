@@ -18,8 +18,7 @@ Member 这个角色可以指定多个，权限很受限
 
 ### 各个角色对应的权限如下：
 
-![1](/public/img/iOS/TeamMemberRoles.png)
-
+<img src="http://olnx7jkmx.bkt.clouddn.com/TeamMemberRoles?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 > 在 iTunes Connect 中根据职责的不同权限也是不同的，存在的角色有:Legal、Admin、Finance、Technical、Sales、Marketing。
 
@@ -36,14 +35,15 @@ Member 这个角色可以指定多个，权限很受限
 > Marketing 市场，官方解释(Assign this role to the person who manages your marketing materials and promotional artwork. Users with the Marketing role are contacted by the App Store team if your app is chosen to be featured)
 
 ### 各个角色的权限如下:
-![2](/public/img/iOS/iTunes-Connect-Roles.png)
+
+<img src="http://olnx7jkmx.bkt.clouddn.com/iTunes-Connect-Roles?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 
 ### 企业开发中各个角色的权限
 
 >企业应用不用上传至 Appstore
-![3](/public/img/iOS/Apple-Developer-Enterprise-Program-Roles.png)
+<img src="http://olnx7jkmx.bkt.clouddn.com/Apple-Developer-Enterprise-Program-Roles?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />
 
 
 #### iOS Developer University Program (大学生一类)
-![4](/public/img/iOS/iOS-Developer-University-Program-Roles.png)
+<img src="http://olnx7jkmx.bkt.clouddn.com/iOS-Developer-University-Program-Roles?imageView2/0/interlace/1/q/100|watermark/2/text/a2xvbmUuc3BhY2U=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0YzRjBGMA==/dissolve/86/gravity/SouthEast/dx/10/dy/10" width="300px" />

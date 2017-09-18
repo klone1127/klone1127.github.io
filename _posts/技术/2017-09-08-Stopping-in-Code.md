@@ -160,9 +160,203 @@ LLDB 将输出包含在可执行文件中的函数信息。输出的信息看起
 
 首先，发现有两个 symbols。第一个和第二个同名；然而，第一个开头有个 @objc，这是一个特殊的函数是由编译器加上去的，作为 bridging 功能。有助于 Swift 和 Objective-C 混编。
 
-> 未完待续
+其次，你有没有发现函数名有多长？！设置一个Swift断点需要写出所有东西，！如果你想在 setter 上设置一个断点，你需要写以下类似内容：
 
+	(lldb) b Signals.SwiftTestClass.name.setter : Swift.ImplicitlyUnwrappedOptional<Swift.String>
 
-> ### 延伸阅读
+使用正则表达式是一个有吸引力的替代这种残暴输入的方法。
 
-[Unix 信号-维基百科](https://zh.wikipedia.org/wiki/Unix%E4%BF%A1%E5%8F%B7)
+除了生成的Swift函数长度之外，注意Swift属性的生成。函数名后跟着属性name，之后跟着setter，也许这也适用于getter？
+
+使用以下方法同时搜索 SwiftTestClass 属性name的 setter 和 getter 方法：
+
+	(lldb) image lookup -rn Signals.SwiftTestClass.name.
+
+使用正则表达式查找所有包含 Signals.SwiftTestClass.name. 的内容。
+
+输出类似以下内容：
+
+	6 matches found in /Users/mylove/Library/Developer/Xcode/DerivedData/Signals-fdzrglclifcqooeqhnyaxxvmqakl/Build/Products/Debug-iphonesimulator/Signals.app/Signals:
+	    Address: Signals[0x000000010000c980] (Signals.__TEXT.__text + 44240)
+	    Summary: Signals`@objc Signals.SwiftTestClass.name.getter : Swift.ImplicitlyUnwrappedOptional<Swift.String> at SwiftTestClass.swift        Address: Signals[0x000000010000ca40] (Signals.__TEXT.__text + 44432)
+	    Summary: Signals`Signals.SwiftTestClass.name.getter : Swift.ImplicitlyUnwrappedOptional<Swift.String> at SwiftTestClass.swift:28        Address: Signals[0x000000010000caf0] (Signals.__TEXT.__text + 44608)
+	    Summary: Signals`@objc Signals.SwiftTestClass.name.setter : Swift.ImplicitlyUnwrappedOptional<Swift.String> at SwiftTestClass.swift        Address: Signals[0x000000010000cbb0] (Signals.__TEXT.__text + 44800)
+	    Summary: Signals`Signals.SwiftTestClass.name.setter : Swift.ImplicitlyUnwrappedOptional<Swift.String> at SwiftTestClass.swift:28        Address: Signals[0x000000010000ccc0] (Signals.__TEXT.__text + 45072)
+	    Summary: Signals`closure #1 : () in Signals.SwiftTestClass.name.materializeForSet : Swift.ImplicitlyUnwrappedOptional<Swift.String> at SwiftTestClass.swift        Address: Signals[0x000000010000ccd0] (Signals.__TEXT.__text + 45088)
+	    Summary: Signals`Signals.SwiftTestClass.name.materializeForSet : Swift.ImplicitlyUnwrappedOptional<Swift.String> at SwiftTestClass.swift
+
+重点看 __Summary__ ，你可以看到 setter 和 getter 方法，materializeForSet 方法。
+
+这里有一个Swift属性模板：
+
+	ModuleName.ClassName.PropertyName.(getter|setter)
+
+### Finally... creating breakpoints
+
+现在你已经知道在怎么在代码中查询函数和方法是否存在了，是时候开始给它们下断点了。
+
+创建断点的方法有几种。__b__ 是最基本的一种。这在Objective-C和C中相当容易，因为名字很短，容易输入(e.g. -[NSObject init])。这在C++和Swift中是相当棘手的，因为编译器将你的方法转成名字很长的符号。
+
+由于UIKit主要由Objective-C编写(至少书中原文撰写的时候)，尝试使用 b 创建一个断点，像下面这样：
+
+	(lldb) b -[UIViewController viewDidLoad]
+
+类似这样的输出：
+
+	Breakpoint 4: where = UIKit`-[UIViewController viewDidLoad], address = 0x000000010ce426db
+
+__Breakpoint 4:__ 说明我这是创建的第四个断点，多个的时候自增。
+
+断点创建好了之后，继续运行Xcode，这时Signals上会增加一个新的cell，点击cell查看详情，刚设置的断点会在加载 viewDidLoad 方法的时候被触发。
+
+__Note:__ 像很多简写命令一样，b 是另一个长的 LLDB 命令的缩写。尝试运行 help
+
+	(lldb) help b
+	 Set a breakpoint using one of several shorthand formats.
+	 Expects 'raw' input (see 'help raw-input'.)
+	
+	Syntax: b
+	
+	'b' is an abbreviation for '_regexp-break'
+
+除了 b 命令，还有一个有一些选项的 breakpoint set 命令。
+
+### Regex breakpoints and scope
+
+另一个非常强大的命令是正则表达式断点 __rbreak__，它是 __breakpoint set -r %1__ 的缩写。
+
+回到上一个例子，Swift有很长的属性名：
+
+	(lldb) b Signals.SwiftTestClass.name.setter : Swift.ImplicitlyUnwrappedOptional<Swift.String>
+>这里需要指出，书中写的是：
+	(lldb) b Breakpoints.SwiftTestClass.name.setter :
+	Swift.ImplicitlyUnwrappedOptional<Swift.String>
+使用书中的方法好像没什么作用。
+
+简单设置断点：
+
+	(lldb) rb SwiftTestClass.name.setter
+
+尽管这个方法简单，但也是有点烦恼的。这个断点会捕获两个 setter，包括 Objective-C 桥接文件在内的方法。
+
+你可以添加 ^(@).*  到断点上来扩充断点，基本上可以说“不用让函数以@开头了”，在以后的章节中，你将构建执行正则表达式的可以自动过滤掉桥接函数的命令。
+
+现在你只需要处理两个断点。更简短，可以用下面的命令：
+
+	(lldb) rb name\.setter
+
+这个命令会产生一些包含 name.setter 的断点。如果你肯定你项目中没有其他名为name的属性，这将很有用；否则你将为它们创建多个断点。
+
+现在尝试为所有Objective-C 的UIViewController 设置断点，在 LLDB 会话中执行：
+
+	(lldb) rb '\-\[UIViewController\ '
+	Breakpoint 5: 762 locations.
+
+使用 __\__ 转义， 表示你希望文字在正则表达式中搜索。结果就是，所有包含'-[UIViewController '(添加''是为了指出此处有空格)的方法都设置了断点。
+
+稍等...关于Objective-C 的扩展呢？它们的格式为 (-|+)[ClassName(categoryName) method]。你必须重写正则表达式以包括类别。
+
+删除所有断点，输入以下内容，并在提示后直接 Enter/输入y：
+
+	(lldb) breakpoint delete
+	About to delete all breakpoints, do you want to do that?: [Y/n] 
+
+下一步，输入：
+
+	(lldb) rb '\-\[UIViewController(\(\w+\))?\ '
+	Breakpoint 6: 928 locations.
+
+在断点中UIViewController后可以有一个带有一个或多个字符的括号。
+
+使用正则表达式断点，你可以使用单个表达式捕获各种各样的断点。
+
+使用 -f 参数，可以将断点的范围限制在某一个文件中。例如，像下面这样：
+
+	(lldb) rb . -f DetailViewController.swift
+
+当你调试DetailViewController.swift的时候会被触发。它将在这个文件中的所有属性的getters/setters，block/closures，extensions/categories，和 函数/方法 上添加断点。-f 常被用作范围限制。
+
+如果你想更疯狂的尝试，可以去掉范围限制：
+
+	(lldb) rb .
+
+它将在任何地方添加断点...包括Signals所有代码，使用到的UIKit和Foundation，所有run loop 事件代码，
+
+你也可以使用__-s__限制在一个library中:
+
+	(lldb) rb . Commons
+
+这将在Commons库中的所有内容上设置一个断点，它是Signalals项目中包含的一个动态库。
+
+你可以使用相同的方法对在UIKit上添加断点。
+
+	(lldb) rb . -s UIKit
+
+只停止在你点的第一个包含在UIKit中的方法上怎么样？__-o__ 参数可以解决，它创建了“one-shot”断点。断点会在被命中后删除。所以它只会命中一次。
+
+	(lldb) breakpoint delete
+	(lldb) rb . -s UIKit -o
+
+__Note:__ 输入命令后需要等一会儿，因为这时需要设置很多很多断点。请确认你使用的是模拟器，否则你将等待更长时间。
+
+下一步，继续调试，点击模拟器上的cell。这时停在触发的第一个UIKit的方法上，然后 continue，将不会再触发断点。
+
+### Modifying and removing breakpoints
+
+现在你已经基本可以创建断点了，你可能会想知道怎么更改。如果你想删除断点或者暂时禁用，怎么办？如果你需要修改断点以在下次触发时执行特定操作，该怎么办？
+
+首先，你需要发现断点的唯一标示，或者一组断点。你可以使用 __-N__ 在创建时给断点命名...
+
+输入：
+
+	(lldb) b main
+	Breakpoint 1: 44 locations.
+
+这个命令会在44个位置创建断点，与各个模块中的 “main” 功能匹配。
+
+breakpoint ID 是1，因为这是在这个会话中创建的第一个断点。要想看这个断点的详细信息可以输入：
+
+	(lldb) breakpoint list 1
+
+会得到类似输出：
+
+	Current breakpoints:
+	1: name = 'main', locations = 44, resolved = 44, hit count = 0
+	  1.1: where = Signals`main + 4 at AppDelegate.swift:28, address = 0x0000000103ee8544, resolved, hit count = 0 
+	  1.2: where = Foundation`-[NSThread main], address = 0x00000001042309e3, resolved, hit count = 0 
+	  1.3: where = Foundation`-[NSBlockOperation main], address = 0x000000010423d7d6, resolved, hit count = 0 
+	  1.4: where = Foundation`-[NSFilesystemItemRemoveOperation main], address = 0x0000000104276e99, resolved, hit count = 0 
+	  1.5: where = Foundation`-[NSFilesystemItemMoveOperation main], address = 0x00000001042779ee, resolved, hit count = 0 
+	...
+
+更清晰的查看方法：
+
+	(lldb) breakpoint list 1 -b
+	1: name = 'main', locations = 44, resolved = 44, hit count = 0
+
+这个输出简明扼要，如果你有大量断点，可以使用这个方法。
+
+如果你想查看所有断点：
+
+	(lldb) breakpoint list
+
+也可以根据ID和范围查看：
+
+	(lldb) breakpoint list 1 3
+	(lldb) breakpoint list 1-3
+
+可以单独删除一个断点：
+
+>> 根据ID
+	(lldb) breakpoint delete 1
+
+>> 也可以根据位置进行删除
+
+	(lldb) breakpoint delete 1.1
+
+最后这个之后删除第一个断点的第一个子断点。
+
+> ### 扩展阅读
+
+* [Unix 信号-维基百科](https://zh.wikipedia.org/wiki/Unix%E4%BF%A1%E5%8F%B7)
+* [python 正则表达式](https://docs.python.org/2/library/re.html)

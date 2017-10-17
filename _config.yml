@@ -586,9 +586,6 @@ exturl: false
 #! UNLESS YOU KNOW WHAT YOU ARE DOING
 #! ---------------------------------------------------------------
 
-# Motion
-use_motion: true
-
 # Fancybox
 fancybox: true
 
@@ -611,6 +608,11 @@ pace: false
 # For example
 # pace_theme: pace-theme-center-simple
 pace_theme: pace-theme-minimal
+
+
+# 动画
+# Motion
+use_motion: false
 
 # Canvas-nest
 canvas_nest: true

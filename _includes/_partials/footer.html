@@ -5,7 +5,7 @@
 {% endif %}
 
 <div class="copyright" >
-  {% assign current = site.time | date: '%Y' %}
+  {% assign current = date: '%Y' %}
   &copy; {% if site.since and site.since != current %} {{ site.since }} - {% endif %}
   <span itemprop="copyrightYear">{{ current }}</span>
   <span class="with-love">
